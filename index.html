@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Site</title>
+    <link href="./css/basic.css" rel="stylesheet" />
+    <link href="./images/favicon01.png" rel="icon" type="image/jpg" />
+    <link href="./css/index.css" rel="stylesheet" />
+    <style>
+        .wrap{
+            width: 100%;
+            /* background-color: aqua; */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+<!-- 헤드라인 부분 --> 
+    <style>
+        .topContainer{
+            width: 100%;
+            height: 120px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        /* 로고 부분 */
+        .topLogo{
+            width: 100%;
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+        }
+        .logo{
+            width: 600px;
+            overflow: hidden;
+        }
+        .logo>img{
+            width: 100px;
+            height: 60px;
+            margin-right: 10px;
+            float: left;
+        }
+        .logo>h1{
+            height: 70px;
+            line-height: 70px;
+            float: left;
+            font-size: 2rem;
+        }
+
+        /* 회원가입, 로그인 부분 */
+        .topNav{
+            width: 350px;
+            /* background-color: aquamarine; */
+            text-align: right;
+        }
+        .topNav li{
+          display: inline-block;
+        }
+        .topNav li>a{
+            display: inline-block;
+            padding: 10px 5px;
+        }
+        .topNav li>a:hover{
+            color: blue;
+        }
+
+        /* 메인 메뉴 부분 */
+        .mainNav{
+            position: absolute;
+            bottom: 3px;
+            left: 150px;
+        }
+        .mainNav>ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .mainNav li>a{
+            display: inline-block;
+            padding: 5px 12px;
+            font-size: 1.1rem;
+        }
+        .mainNav li>a:hover{
+            color: blueviolet;
+        }
+    </style>
+
+        <div class="topContainer">
+            <div class="topLogo">
+                <nav class="logo">
+                    <img src="./images/favicon01.png">
+                    <h1>책마을 책세상</h1>
+                </nav>
+                <nav class="topNav">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="mainNav">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">프로그램</a></li>
+                    <li><a href="#">열린공간</a></li>
+                    <li><a href="#">동아리모임</a></li>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">자료실</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+            </nav>
+        </div>
+
+<!-- 검색 부분 --> 
+        <style>
+            .search{
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                padding: 3px 0px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                border-top: 1px solid gainsboro;
+                border-bottom: 1px solid gainsboro;
+            } 
+            .search>form>div{
+                float: left;
+                width: 200px;
+                /* background-color: aqua; */
+            }
+            .search>form>input[name="textSearch"]{
+                height: 35px;
+                width: 320px;
+                margin-left: 10px;
+            }  
+            .search>form>span{
+                display: inline-block;
+            }         
+        </style>
+
+        <div class="search">
+            <h2>책마을 책세상 통합검색</h2>
+            <form action="" method="get" name="search">
+                <div>
+                <input type="radio" name="dataSearch" value="data1"><span> 자료검색</span>
+                <input type="radio" name="dataSearch" value="data2"><span> 강좌검색</span>
+               </div>
+                <input type="text" name="textSearch" placeholder="내용을 입력해주세요">
+            </form>
+        </div>
+       
+<!-- 배너 부분 --> 
+        <style>
+            .banner{
+                margin-bottom: 20px;
+            }
+            .banner>img{
+                width: 100%;
+            }
+
+        </style>
+        <div class="banner">
+            <img src="./images/myth.jpg">
+        </div>
+
+
+<!-- 코스 안내 부분 --> 
+<style>
+    .courseInfo{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .courseInfo>a{
+        display: block;
+        margin: 0px;
+    }
+    .courseInfo img{
+        box-sizing: border-box;
+        width: 240px;
+    }
+</style>
+        <div class="courseInfo">
+            <a href="#"><img src="./images/indexpage_1.jpg" alt=""></a>
+            <a href="#"><img src="./images/indexpage_2.jpg" alt=""></a>
+            <a href="#"><img src="./images/indexpage_3.jpg" alt=""></a>
+            <a href="#"><img src="./images/indexpage_4.jpg" alt=""></a>
+        </div>
+
+<!-- mainInfo --> 
+<style>
+ .mainInfo{
+   margin-top: 20px;
+   box-sizing: border-box;
+   width: 100%;
+   height: 420px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content:space-between;
+ }
+ /* tab 부분*/
+ .tabMenu{
+    width: 600px;
+    height: 420px;
+    float: left;
+    margin-right: 20px;
+ }
+ /* tab 제목 */
+ .tabTitle {
+  height: 49px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* tab 제목의 버튼 부분 */
+.tabTitle button {
+  width: 150px;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tabTitle button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tabTitle button.active {
+  background-color: #ccc;
+}
+
+/* tab page */
+.tabPage {
+  box-sizing: border-box;
+  height: 369px;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tablinkInit{
+    display: block;
+}
+
+/* 책소개 이미지 부분 */
+.bookInfo>img{
+    box-sizing: border-box;
+    width: 340px;
+    height: 369px;
+    margin-top: 50px;
+}
+</style>
+        <div class="mainInfo">
+            <div class="tabMenu">
+                <div class="tabTitle">
+                    <button class="tablinks">공지사항</button>
+                    <button class="tablinks">문화행사</button>
+                    <button class="tablinks">책바다</button>
+                  </div>
+                  <div id="inform1" class="tabPage  tablinkInit">
+                    <h3>공지사항1</h3>
+                    <p>즐거운 시간....</p>
+                  </div>
+                  
+                  <div id="inform2" class="tabPage">
+                    <h3>공지사항2</h3>
+                    <p>행복한 시간....</p> 
+                  </div>
+                  
+                  <div id="inform3" class="tabPage">
+                    <h3>공지사항3</h3>
+                    <p>기쁜 시간....</p>
+                  </div>
+            </div>
+            <div class="bookInfo">
+                <img src="../images/cola.png">
+            </div>
+        </div>
+
+<!-- footer 부분 --> 
+<style>
+    .footer{
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+    }
+    .companyInfo{
+        box-sizing: border-box;
+        width: 100%;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        margin-bottom: 10px;
+    }
+    .companyInfo>ul{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        flex-direction: row;
+        height: 40px;
+        line-height: 40px;
+        padding: 0px 20px;
+    }
+    .companyInfo li>a:hover{
+        color: red;
+    }
+    .symbols{
+        margin-left: 18px;
+    }
+    .companyAddress>span{
+       line-height: 28px;
+       letter-spacing: 1px;
+       margin-left: 20px;
+    }
+</style>
+
+        <footer class="footer">
+            <nav class="companyInfo">
+                <ul>
+                   <li><a href="#">정보공개알림<span class="symbols">|</span></a></li>
+                   <li><a href="#">개인정보처리방침<span class="symbols">|</span></a></li>
+                   <li><a href="#">이용서비스현황<span class="symbols">|</span></a></li>
+                   <li><a href="#">이용규정<span class="symbols">|</span></a></li>
+                   <li><a href="#">이메일무단수집거부<span class="symbols">|</span></a></li>
+                   <li><a href="#">전화번호안내<span class="symbols">|</span></a></li>
+                   <li><a href="#">오시는 길</a></li>
+                </ul>
+            </nav>
+            <div class="companyAddress">
+                <span>(우)06220 서울시 강남구 테헤란로(강남) 대표전화:02-1234-1234 / 팩스번호: 02-1234-4567</span><br>
+                <span>Copyright&copy;2023 책마을책세상 All Right Reserved</span>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
